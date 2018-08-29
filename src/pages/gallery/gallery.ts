@@ -8,33 +8,34 @@ import {SchoolPage} from '../school/school';
 })
 export class GalleryPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,
+              private alertCtrl: AlertController) {
 
   }
 
-// private alertctrl: AlertController
-// presentConfirm() {
-// let alert = this.alertctrl.create({
-//   title: 'Confirm purchase',
-//     message: 'Do you want to buy this book?',
-//     // buttons: [
-//     //
-//     //     text: 'Cancel',
-//     //     role: 'cancel',
-//     //     handler: () => {
-//     //       console.log('Cancel clicked');
-//     //     }
-//     //   },
-//     //   {
-//     //     text: 'Buy',
-//     //     handler: () => {
-//     //       console.log('Buy clicked');
-//     //     }
-//     //   }
-//     // ]
-//   });
-//   alert.present();
-// }
+
+  presentConfirm(custometitle) {
+    let alert = this.alertCtrl.create({
+      title: custometitle,
+      message: 'Use your current location?',
+      buttons: [
+        {
+          text: 'Yes',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'No',
+          handler: () => {
+            console.log('Buy clicked');
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
 
   showDetail( ){
     this.navCtrl.push( SchoolPage );

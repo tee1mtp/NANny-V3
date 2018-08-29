@@ -14,26 +14,24 @@
 </ion-title>
 
 <ion-list>
-  <!-- <ion-item>
-    <ion-input placeholder="Clear Input" clearInput></ion-input>
-  </ion-item> -->
   <ion-item>
     <ion-label color="primary" placeholder="Location" floating>Floating Label</ion-label>
     <ion-input></ion-input>
   </ion-item>
 </ion-list>
 
-  <ion-card block (click)="showDetail('School Zone')">
-    <img src="assets/imgs/card-schoolzone.png"/>
-    <div class="card-title">School Zone</div>
-  </ion-card>
+<ion-card block (click)="presentConfirm('School Zone')">
+  <img src="assets/imgs/card-schoolzone.png"/>
+  <div class="card-title">School Zone</div>
+</ion-card>
 
-  <ion-card block (click)="showDetail('Cyclist')">
+
+  <ion-card block (click)="presentConfirm('Cyclist')">
     <img src="assets/imgs/card-cyclist.png"/>
     <div class="card-title">Cyclist</div>
   </ion-card>
 
-  <ion-card block (click)="showDetail('Jay Walker')">
+  <ion-card block (click)="presentConfirm('Jay Walker')">
     <img src="assets/imgs/card-jaywalker.png"/>
     <div class="card-title">Jay Walker</div>
   </ion-card>
