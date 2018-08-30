@@ -13,7 +13,17 @@ export class GalleryPage {
 
   }
 
-  presentPrompt() {
+  presentAlert(custometitle) {
+    let alert = this.alertCtrl.create({
+      title: custometitle,
+      subTitle: 'Thank you for your submission!\
+      Thanks to you, we can help  make the streets safer!',
+      buttons: ['Dismiss']
+    });
+    alert.present();
+  }
+
+  presentPrompt(custometitle) {
   let alert = this.alertCtrl.create({
     title: 'Enter Location:',
     inputs: [
@@ -34,13 +44,13 @@ export class GalleryPage {
         text: 'Submit',
         handler: data => {
           console.log(data.location);
+          this.presentAlert(custometitle);
           }
         }
     ]
   });
   alert.present();
   }
-
 
 
 presentConfirm(custometitle) {
@@ -53,13 +63,14 @@ presentConfirm(custometitle) {
         role: 'cancel',
         handler: () => {
           console.log('Cancel clicked');
+          this.presentAlert(custometitle);
         }
       },
       {
         text: 'No',
         handler: () => {
           console.log('Buy clicked');
-          this.presentPrompt();
+          this.presentPrompt(custometitle);
         }
       }
     ]
