@@ -8,10 +8,17 @@ import {SchoolPage} from '../school/school';
 })
 export class GalleryPage {
 
+  nameInput: string;
+
+
   constructor(public navCtrl: NavController,
               private alertCtrl: AlertController) {
 
   }
+
+  // buttonPractice(){
+  //   console.log(this.nameInput);
+  // }
 
   presentAlert(custometitle) {
     let alert = this.alertCtrl.create({
@@ -51,7 +58,6 @@ export class GalleryPage {
   });
   alert.present();
   }
-
 
 presentConfirm(custometitle) {
   let alert = this.alertCtrl.create({

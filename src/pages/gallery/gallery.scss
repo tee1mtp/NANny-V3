@@ -5,10 +5,23 @@
     text-align: center;
   }
 
+.blue{
+  color: #01A9DB;
+}
+
+.gallery-img {
+  height: 190px;
+  border-radius: 15px;
+}
+
+.text-align{
+  text-align:center;
+}
+
   .card-title {
     position: absolute;
     top: 36%;
-    font-size: 2.0em;
+    font-size: 3.0em !important;
     width: 100%;
     font-weight: bold;
     color: #fff;
