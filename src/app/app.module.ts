@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { GalleryPage } from '../pages/gallery/gallery';
 import { DetailPage } from '../pages/detail/detail';
 import { SchoolPage } from '../pages/school/school';
+import { RoadblocksPage } from '../pages/roadblocks/roadblocks';
 
 import {ComponentsModule} from '../components/components.module';
 @NgModule({
@@ -18,7 +19,8 @@ import {ComponentsModule} from '../components/components.module';
     HomePage,
     GalleryPage,
     DetailPage,
-    SchoolPage
+    SchoolPage,
+    RoadblocksPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import {ComponentsModule} from '../components/components.module';
     HomePage,
     GalleryPage,
     DetailPage,
-    SchoolPage
+    SchoolPage,
+    RoadblocksPage
   ],
   providers: [
     StatusBar,

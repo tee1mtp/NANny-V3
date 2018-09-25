@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Road Hazards
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+
+<!-- <ion-title>
+  Miscellaneous
+</ion-title> -->
+
+<!-- <ion-list>
+  <ion-item>
+    <ion-label color="primary" placeholder="Location" floating>Name</ion-label>
+    <ion-incd ~put [(ngModel)]="nameInput"></ion-input>
+  </ion-item>
+</ion-list>
+
+{{nameInput}}
+
+<button (click)="buttonPractice()">click</button> -->
+
+
+
+<ion-card block (click)="presentConfirm('Black Ice')">
+  <img class="gallery-img" src="assets/imgs/card-blackice.png"/>
+  <div class="blue card-title">Black Ice</div>
+</ion-card>
+
+<!-- <div class="center"> -->
+  <ion-card block (click)="presentConfirm('Construction')">
+    <img  class="gallery-img" src="assets/imgs/card-construction.png"/>
+    <div class="card-title">Construction</div>
+  </ion-card>
+
+  <ion-card block (click)="presentConfirm('Pot Hole')">
+    <img class="gallery-img" src="assets/imgs/card-pothole.png"/>
+    <div class="card-title">Pot Hole</div>
+  </ion-card>
+
+  <ion-card block (click)="showDetail('Extra')">
+    <img class="gallery-img" src="assets/imgs/card-extra.png"/>
+    <div class="card-title">Extra</div>
+  </ion-card>
+<!-- </div> -->
+</ion-content>
