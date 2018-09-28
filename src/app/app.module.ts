@@ -13,6 +13,8 @@ import { SchoolPage } from '../pages/school/school';
 import { RoadblocksPage } from '../pages/roadblocks/roadblocks';
 
 import {ComponentsModule} from '../components/components.module';
+import { Geolocation } from '@ionic-native/geolocation';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -40,6 +42,7 @@ import {ComponentsModule} from '../components/components.module';
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
