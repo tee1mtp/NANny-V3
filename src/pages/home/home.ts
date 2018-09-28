@@ -5,7 +5,7 @@ import {RoadblocksPage} from '../roadblocks/roadblocks';
 // import {Http} from '@angular/http';
 // import 'rxjs/add/operator/map';
 
-
+declare var google;
 
 @Component({
   selector: 'page-home',
@@ -16,9 +16,9 @@ export class HomePage {
 // Below Code is required for API example
 // posts: any;
 
-// @ViewChild('map') mapElement: ElementRef;
-//  map: any;
-//  google: any;
+@ViewChild('map') mapElement: ElementRef;
+ map: any;
+
 
   constructor(public navCtrl: NavController) {
     // Below Code is required for API example
@@ -37,23 +37,27 @@ export class HomePage {
     this.navCtrl.push( RoadblocksPage );
   }
 
-  // ionViewDidLoad(){
-  //   this.loadMap();
-  // }
+  ionViewDidLoad(){
+    this.loadMap();
+    console.log("ionView Loaded")
+  }
 
-  // loadMap(){
-  //
-  //   let latLng = new google.maps.LatLng(-34.9290, 138.6010);
-  //
-  //   let mapOptions = {
-  //     center: latLng,
-  //     zoom: 15,
-  //     mapTypeId: google.maps.MapTypeId.ROADMAP
-  //   }
-  //
-  //   this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-  //
-  // }
+
+  loadMap(){
+
+    let latLng = new google.maps.LatLng(-34.9290, 138.6010);
+
+    let mapOptions = {
+      center: latLng,
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+
+  }
+
+}
 
 // Below Code is required for API example
 //   this.http.get('http://ionic.io', {}, {})
@@ -76,4 +80,3 @@ export class HomePage {
 // }
 //
 // this.loadJCrew();
-}
