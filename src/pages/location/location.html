@@ -1,0 +1,33 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Location
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div class= "a" padding>
+    <h3 padding>Use Your Current Location?</h3>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-6>
+      <button ion-button round full (click)="presentAlert()">Yes</button>
+    </ion-col>
+    <ion-col col-6>
+      <button ion-button round full (click)="presentPrompt()">No</button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+    <!-- <ion-button> -->
+    <!-- <button class="margin-bottom-lg" ion-button round color="first" block (click)="showImages()">Miscellaneous</button>
+    <button class="margin-bottom-lg" ion-button round color="first" block (click)="showImages2()">Road Hazards</button> -->
+    <!-- <button class="margin-bottom-lg" ion-button round color="first" block>Extra</button> --> -->
+    <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button> -->
+  <!-- </ion-button> -->
+  <div #map id="map"></div>
+</div>
+</ion-content>

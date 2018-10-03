@@ -11,6 +11,7 @@ import { GalleryPage } from '../pages/gallery/gallery';
 import { DetailPage } from '../pages/detail/detail';
 import { SchoolPage } from '../pages/school/school';
 import { RoadblocksPage } from '../pages/roadblocks/roadblocks';
+import { LocationPage } from '../pages/location/location';
 
 import {ComponentsModule} from '../components/components.module';
 import { Geolocation } from '@ionic-native/geolocation';
@@ -22,7 +23,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     GalleryPage,
     DetailPage,
     SchoolPage,
-    RoadblocksPage
+    RoadblocksPage,
+    LocationPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     GalleryPage,
     DetailPage,
     SchoolPage,
-    RoadblocksPage
+    RoadblocksPage,
+    LocationPage
   ],
   providers: [
     StatusBar,
