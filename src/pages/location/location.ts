@@ -95,13 +95,12 @@ addInfoWindow(marker, content){
 
 }
 
-// Alert Buttons After Clicking Yes or
+// Alert Buttons After Clicking Yes or No
 
 presentAlert(custometitle) {
   let alert = this.alertCtrl.create({
       title: custometitle,
-      subTitle: 'Thank you for your submission!\
-//       Thanks to you, we can help  make the streets safer!',
+      subTitle: 'Submission Successful! Thanks to you, we can help  make the streets safer!',
       buttons: ['Dismiss']
     });
     alert.present();
@@ -135,6 +134,8 @@ presentAlert(custometitle) {
   });
   alert.present();
   }
+
+//Aditional alert buttons not being used below:
 
 // presentConfirm(custometitle) {
 //   let alert = this.alertCtrl.create({
