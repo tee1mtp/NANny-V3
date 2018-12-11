@@ -12,9 +12,17 @@ import { DetailPage } from '../pages/detail/detail';
 import { SchoolPage } from '../pages/school/school';
 import { RoadblocksPage } from '../pages/roadblocks/roadblocks';
 import { LocationPage } from '../pages/location/location';
+import { LocationSelectPage } from '../pages/location-select/location-select';
 
 import {ComponentsModule} from '../components/components.module';
+import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
+import { ConnectivityServiceProvider } from '../providers/connectivity-service/connectivity-service';
+// import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
+// import { Connectivity } from '../providers/connectivity-service';
+// import { GoogleMaps } from '../providers/google-maps';
+import { Network } from '@ionic-native/network';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +32,8 @@ import { Geolocation } from '@ionic-native/geolocation';
     DetailPage,
     SchoolPage,
     RoadblocksPage,
-    LocationPage
+    LocationPage,
+    LocationSelectPage
   ],
   imports: [
     BrowserModule,
@@ -40,13 +49,21 @@ import { Geolocation } from '@ionic-native/geolocation';
     DetailPage,
     SchoolPage,
     RoadblocksPage,
-    LocationPage
+    LocationPage,
+    LocationSelectPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    GoogleMaps,
     Geolocation,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ConnectivityServiceProvider,
+    // GoogleMapsProvider,
+    // Connectivity,
+
+    // GoogleMapsProvider,
+    Network
   ]
 })
 export class AppModule {}

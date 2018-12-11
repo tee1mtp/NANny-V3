@@ -14,6 +14,7 @@
 		521F54F2216BF6BE00F31D3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521F54F0216BF6BE00F31D3F /* Main.storyboard */; };
 		521F54F4216BF6BF00F31D3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521F54F3216BF6BF00F31D3F /* Assets.xcassets */; };
 		521F54F7216BF6BF00F31D3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521F54F5216BF6BF00F31D3F /* LaunchScreen.storyboard */; };
+		521F5501216BF71400F31D3F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521F5500216BF71400F31D3F /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		521F54F3216BF6BF00F31D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		521F54F6216BF6BF00F31D3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		521F54F8216BF6BF00F31D3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		521F54FE216BF70900F31D3F /* Nanny.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Nanny.entitlements; sourceTree = "<group>"; };
+		521F5500216BF71400F31D3F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521F5501216BF71400F31D3F /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +48,7 @@
 			children = (
 				521F54E7216BF6BE00F31D3F /* Nanny */,
 				521F54E6216BF6BE00F31D3F /* Products */,
+				521F54FF216BF71400F31D3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +63,7 @@
 		521F54E7216BF6BE00F31D3F /* Nanny */ = {
 			isa = PBXGroup;
 			children = (
+				521F54FE216BF70900F31D3F /* Nanny.entitlements */,
 				521F54E8216BF6BE00F31D3F /* AppDelegate.swift */,
 				521F54EA216BF6BE00F31D3F /* DocumentBrowserViewController.swift */,
 				521F54EC216BF6BE00F31D3F /* DocumentViewController.swift */,
@@ -68,6 +74,14 @@
 				521F54F8216BF6BF00F31D3F /* Info.plist */,
 			);
 			path = Nanny;
+			sourceTree = "<group>";
+		};
+		521F54FF216BF71400F31D3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				521F5500216BF71400F31D3F /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +116,20 @@
 				TargetAttributes = {
 					521F54E4216BF6BE00F31D3F = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 1;
+							};
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -290,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Nanny/Nanny.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39V5Q5W678;
 				INFOPLIST_FILE = Nanny/Info.plist;
@@ -308,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Nanny/Nanny.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39V5Q5W678;
 				INFOPLIST_FILE = Nanny/Info.plist;
