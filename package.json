@@ -1,14 +1,20 @@
+
 {
   "name": "nannyBosch",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
   "private": true,
+  "main": "server.js",
   "scripts": {
-    "start": "ionic-app-scripts serve",
+    "start": "node server.js",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint"
+    "lint": "ionic-app-scripts lint",
+    "engines": {
+      "node": "6.11.1"
+    },
+  
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
@@ -31,7 +37,14 @@
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.26",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.0",
+    "del": "2.2.0",
+    "express": "^4.14.0",
+    "http": "0.0.0",
+    "method-override": "^2.3.6",
+    "morgan": "^1.7.0"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.11",
