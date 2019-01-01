@@ -1,0 +1,6 @@
+{
+  "appId": "com.bosch.nanny",
+  "appName": "nannyBosch",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

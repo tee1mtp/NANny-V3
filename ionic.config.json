@@ -1,7 +1,8 @@
 {
   "name": "nannyBosch",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "ionic-angular",
   "pro_id": "00edbe25"
